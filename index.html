@@ -1,6 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <style> /* Remove default browser margins */
+body {
+  margin: 0;
+  padding-top: 60px; /* Prevents page content from hiding behind the bar */
+  font-family: Arial, sans-serif;
+}
+
+/* The Top Bar Container */
+.top-bar {
+  position: fixed;     /* Pins the bar to the viewport */
+  top: 0;              /* Aligns it perfectly to the top */
+  left: 0;
+  width: 100%;         /* Stretches it across the full screen */
+  height: 60px;        /* Sets the height of the bar */
+  background-color: #333; /* Dark background color */
+  display: flex;       /* Aligns items inside horizontally */
+  justify-content: space-between; /* Pushes logo to left, links to right */
+  align-items: center; /* Centers items vertically */
+  padding: 0 20px;     /* Adds space on the left and right sides */
+  box-sizing: border-box;
+  z-index: 1000;       /* Keeps the bar on top of other content */
+}
+
+/* Logo Styling */
+.logo {
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* Links List */
+.nav-links {
+  list-style: none;    /* Removes standard bullet points */
+  display: flex;       /* Aligns the list items horizontally */
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  margin-left: 20px;   /* Gaps the links apart */
+}
+
+/* Individual Link Styling */
+.nav-links a {
+  color: white;
+  text-decoration: none; /* Removes the underline */
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+/* Hover Effect */
+.nav-links a:hover {
+  color: #00bcd4;      /* Changes color when mouse hovers over */
+}
+</style>
+   
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>John's Clickers</title>
